@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.user_admin.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_productFragment2"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cotegaryFragment2"
+            app:destination="@id/cotegaryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sliderFragment2"
+            app:destination="@id/sliderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.example.user_admin.fragment.AddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.user_admin.fragment.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_productFragment_to_addProductFragment2"
+            app:destination="@id/addProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sliderFragment"
+        android:name="com.example.user_admin.fragment.SliderFragment"
+        android:label="fragment_slider"
+        tools:layout="@layout/fragment_slider" />
+    <fragment
+        android:id="@+id/cotegaryFragment"
+        android:name="com.example.user_admin.fragment.CotegaryFragment"
+        android:label="fragment_cotegary"
+        tools:layout="@layout/fragment_cotegary" />
+</navigation>
